@@ -3,6 +3,8 @@ import 'dart:ui' as ui;
 extension SizeStringExtension on ui.Size {
   String get likeString => '${width.toInt()}x${height.toInt()}';
 
+  double get aspectRatio => width / height;
+
   ui.Size get swapped => ui.Size(height, width);
 }
 
