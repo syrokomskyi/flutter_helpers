@@ -1,7 +1,13 @@
 import 'dart:math';
 import 'dart:ui' as ui;
 
+import 'package:dart_helpers/dart_helpers.dart';
 import 'package:flutter/material.dart' as material;
+import 'package:package_info_plus/package_info_plus.dart';
+
+Future<String> get appVersion async =>
+    '${(await PackageInfo.fromPlatform()).version}'
+    '.$operatingSystemOneLetter';
 
 // For unit tests.
 // \see debugCheckHasMediaQuery()
