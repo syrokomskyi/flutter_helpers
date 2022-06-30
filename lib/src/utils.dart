@@ -1,3 +1,4 @@
+import 'dart:io' as io show Platform;
 import 'dart:math';
 import 'dart:ui' as ui;
 
@@ -29,3 +30,6 @@ ui.Color get randomPrimaryColor => randomColor(material.Colors.primaries);
 
 ui.Color randomColor(List<ui.Color>? source) =>
     (source ?? allColors)[Random().nextInt((source ?? allColors).length)];
+
+bool get isFlutterTestEnvironment =>
+    io.Platform.environment.containsKey('FLUTTER_TEST');
