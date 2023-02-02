@@ -28,8 +28,13 @@ ui.Color get randomAccentColor => randomColor(material.Colors.accents);
 
 ui.Color get randomPrimaryColor => randomColor(material.Colors.primaries);
 
-ui.Color randomColor(List<ui.Color>? source) =>
+ui.Color randomColor([List<ui.Color>? source]) =>
     (source ?? allColors)[Random().nextInt((source ?? allColors).length)];
+
+ui.Color stableColor(String text, [List<ui.Color>? source]) {
+  final colors = source ?? allColors;
+  return colors[text.hashCode % colors.length];
+}
 
 bool get isFlutterTestEnvironment =>
     io.Platform.environment.containsKey('FLUTTER_TEST');
