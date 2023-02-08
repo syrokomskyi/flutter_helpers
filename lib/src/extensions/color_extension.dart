@@ -5,8 +5,12 @@ import 'package:dart_helpers/dart_helpers.dart';
 const defaultColor = ui.Color(defaultColorInt);
 
 /// \see `ColorIntExtension` from the project `dart_helpers`.
-extension ColorExtension on int {
+extension ColorIntExtension on int {
   ui.Color get toColor => ui.Color(this);
+}
+
+extension ColorStringExtension on String {
+  ui.Color get toColor => ui.Color(toColorInt);
 }
 
 extension ColorColorExtension on ui.Color {
