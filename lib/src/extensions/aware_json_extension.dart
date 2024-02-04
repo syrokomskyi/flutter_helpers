@@ -1,4 +1,4 @@
-import 'package:dart_helpers/dart_helpers.dart';
+import 'package:json_dart/json_dart.dart';
 
 import '../classes/aware.dart';
 import 'device_extension.dart';

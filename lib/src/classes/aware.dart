@@ -1,6 +1,5 @@
 import 'package:dart_helpers/dart_helpers.dart';
-import 'package:flutter/widgets.dart';
-import 'package:vector_math/vector_math_64.dart';
+import 'package:flutter/material.dart';
 
 import '../extensions/device_extension.dart';
 import '../utils.dart';

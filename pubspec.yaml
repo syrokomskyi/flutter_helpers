@@ -1,6 +1,6 @@
 name: flutter_helpers
 description: Helpers for Flutter's development. See also `dart_helpers`.
-homepage: https://github.com/signmotion/flutter_helpers
+repository: https://github.com/signmotion/flutter_helpers
 publish_to: none
 
 # Format:
@@ -12,21 +12,18 @@ version: 0.1.0
 
 environment:
   flutter: ">=3.16.5 <4.0.0"
-  sdk: ">=3.2.3 <4.0.0"
+  sdk: ">=3.2.6 <4.0.0"
 
 dependencies:
-  flutter:
-    sdk: flutter
-
   dart_helpers:
     path: ../dart_helpers
-
+  flutter:
+    sdk: flutter
+  json_dart: ^0.1.0
   package_info_plus: ^5.0.1
 
 dev_dependencies:
   flutter_lints: ^3.0.1
-
   flutter_test:
     sdk: flutter
-
   json_annotation: ^4.5.0
